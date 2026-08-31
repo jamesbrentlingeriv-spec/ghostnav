@@ -1079,7 +1079,7 @@ These public records provide the foundational data used to verify stationary cam
         : NEWS_ARTICLES.filter(a => a.category === filter);
 
       container.innerHTML = filtered.map(item => `
-        <article class="pt-4 pb-3 hover:bg-slate-900/60 px-3.5 rounded-2xl transition duration-200 group border border-slate-800/40 hover:border-cyan-500/40 cursor-pointer shadow-lg bg-slate-950/40" onclick="openArticleModal(${item.id})">
+        <article class="pt-4 pb-3 hover:bg-slate-900/40 px-3 rounded-2xl transition duration-200 group cursor-pointer" onclick="openArticleModal(${item.id})">
           <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
             <div class="flex items-center gap-2">
               <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded border ${item.tagColor}">
@@ -1093,7 +1093,7 @@ These public records provide the foundational data used to verify stationary cam
           <div class="block group">
             <h4 class="font-orbitron font-bold text-sm sm:text-base text-white group-hover:text-cyan-300 transition-colors leading-snug mb-2 flex items-center justify-between gap-2">
               <span>${item.title}</span>
-              <span class="text-[10px] text-cyan-400 font-mono shrink-0 opacity-70 group-hover:opacity-100 transition-opacity bg-slate-900 px-2 py-0.5 rounded border border-slate-800">EXPAND BRIEFING 🔍</span>
+              <span class="text-xs text-cyan-400 font-mono shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">↗</span>
             </h4>
           </div>
 
@@ -1106,18 +1106,15 @@ These public records provide the foundational data used to verify stationary cam
               <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
               ${item.stats}
             </span>
-            <div class="flex items-center gap-2">
-              <span class="text-xs text-cyan-400 font-bold hover:underline flex items-center gap-1">Read Briefing 🔍</span>
-              <a 
-                href="${item.link}" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                onclick="event.stopPropagation()"
-                class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-cyan-300 hover:text-white font-bold flex items-center gap-1 transition border border-slate-700 cursor-pointer"
-              >
-                Verify Source ↗
-              </a>
-            </div>
+            <a 
+              href="${item.link}" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              onclick="event.stopPropagation()"
+              class="text-cyan-400 hover:text-cyan-300 font-bold flex items-center gap-1 hover:underline cursor-pointer"
+            >
+              Verify Public Record Source ↗
+            </a>
           </div>
         </article>
       `).join('');
@@ -1218,54 +1215,60 @@ These public records provide the foundational data used to verify stationary cam
     });
   </script>
 
-<!-- INTEL DOSSIER BRIEFING MODAL OVERLAY -->
-<div id="dossier-article-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 hidden bg-black/80 backdrop-blur-md transition-opacity duration-300" onclick="handleBackdropClick(event)">
-  <div class="relative w-full max-w-2xl bg-slate-900/95 border-2 border-cyan-500/60 rounded-3xl p-5 sm:p-8 shadow-2xl shadow-cyan-500/20 max-h-[90vh] overflow-y-auto cyber-panel" onclick="event.stopPropagation()">
-    <!-- Close Button -->
-    <button onclick="closeArticleModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 rounded-xl bg-slate-800/80 border border-slate-700 text-slate-400 hover:text-white hover:border-cyan-400 transition cursor-pointer">
-      <span class="sr-only">Close</span>
-      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-      </svg>
+<!-- NEWSPAPER INVESTIGATIVE DISPATCH OVERLAY -->
+<div id="dossier-article-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 hidden bg-black/85 backdrop-blur-md transition-opacity duration-300" onclick="handleBackdropClick(event)">
+  <div class="relative w-full max-w-2xl bg-[#f7f4ee] text-slate-900 border-4 border-slate-800 rounded-2xl p-5 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto font-serif" onclick="event.stopPropagation()">
+    
+    <!-- Close Button (Top Corner) -->
+    <button onclick="closeArticleModal()" class="absolute top-3 right-3 sm:top-5 sm:right-5 p-1.5 rounded-lg bg-slate-200 border border-slate-400 text-slate-700 hover:text-black hover:bg-slate-300 transition cursor-pointer font-sans text-xs font-bold flex items-center gap-1">
+      ✕ <span>CLOSE</span>
     </button>
 
-    <!-- Modal Header -->
-    <div class="flex flex-wrap items-center gap-2 mb-3">
-      <span id="modal-tag" class="text-[10px] font-mono font-bold px-2.5 py-1 rounded border"></span>
-      <span id="modal-source" class="text-xs font-mono text-cyan-400 font-bold"></span>
-      <span id="modal-date" class="text-xs font-mono text-slate-500 ml-auto mr-8 sm:mr-0"></span>
+    <!-- Newspaper Masthead -->
+    <div class="border-b-2 border-slate-900 pb-2 mb-4 text-center">
+      <div class="text-[9px] sm:text-[10px] font-mono tracking-[0.25em] text-slate-600 uppercase font-bold">
+        ★ DECLASSIFIED INTELLIGENCE DISPATCH ★ PUBLIC ACCOUNTABILITY ARCHIVE ★
+      </div>
+      <div class="text-xl sm:text-3xl font-serif font-black tracking-tight text-slate-950 border-y-2 border-slate-900 py-1 my-1.5 uppercase font-bold">
+        The Surveillance Chronicle
+      </div>
+      <div class="flex flex-wrap items-center justify-between text-[10px] sm:text-[11px] font-mono text-slate-700 pt-0.5">
+        <span id="modal-source" class="font-bold text-slate-900"></span>
+        <span id="modal-date" class="italic"></span>
+        <span id="modal-tag" class="font-bold px-1.5 py-0.2 bg-slate-900 text-white rounded text-[9px]"></span>
+      </div>
     </div>
 
-    <!-- Title -->
-    <h2 id="modal-title" class="font-orbitron font-bold text-lg sm:text-2xl text-white leading-snug mb-4"></h2>
+    <!-- Main Headline -->
+    <h2 id="modal-title" class="font-serif font-black text-lg sm:text-2xl text-slate-950 leading-tight mb-3"></h2>
 
-    <!-- Key Stats Badge -->
-    <div class="p-3 rounded-2xl bg-slate-950/80 border border-slate-800 mb-5 flex items-center gap-2 text-xs font-mono text-rose-400 font-bold">
-      <span class="w-2 h-2 rounded-full bg-rose-400 animate-pulse shrink-0"></span>
+    <!-- Lead Key Telemetry Subhead -->
+    <div class="border-y border-slate-300 py-2 mb-4 text-xs font-mono text-rose-800 bg-rose-50/60 px-3 rounded flex items-center gap-2 font-bold">
+      <span class="w-2 h-2 rounded-full bg-rose-600 shrink-0"></span>
       <span id="modal-stats"></span>
     </div>
 
-    <!-- Expanded Body Summary -->
-    <div class="space-y-3 text-xs sm:text-sm text-slate-200 leading-relaxed font-sans mb-6" id="modal-expanded-content">
+    <!-- Newspaper Story Columns -->
+    <div class="text-slate-800 text-xs sm:text-sm leading-relaxed sm:columns-2 gap-6 space-y-3 text-justify border-b border-slate-300 pb-5 mb-5 font-serif" id="modal-expanded-content">
     </div>
 
-    <!-- Key Takeaway Bullets -->
-    <div class="mb-6 p-4 rounded-2xl bg-cyan-950/30 border border-cyan-500/30">
-      <div class="text-[11px] font-mono font-bold text-cyan-300 uppercase tracking-wider mb-2 flex items-center gap-2">
-        <span>⚡</span> TACTICAL INTELLIGENCE HIGHLIGHTS
+    <!-- Tactical Highlights Box -->
+    <div class="mb-5 p-3.5 rounded-xl bg-slate-100 border border-slate-300 text-xs font-sans">
+      <div class="text-[10px] font-mono font-bold text-slate-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+        <span>📑</span> KEY INVESTIGATIVE FINDINGS
       </div>
-      <ul id="modal-keypoints" class="space-y-2 text-xs text-slate-300 font-sans list-disc list-inside">
+      <ul id="modal-keypoints" class="space-y-1.5 text-slate-700 list-disc list-inside">
       </ul>
     </div>
 
-    <!-- Modal Footer Actions -->
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-slate-800">
-      <a id="modal-link-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-cyan-500 text-black font-orbitron font-bold text-xs uppercase tracking-wider hover:bg-cyan-400 transition-all shadow-cyan-glow flex items-center justify-center gap-2 cursor-pointer">
-        <span>🔗 Open Verified Public Record Source</span>
+    <!-- Newspaper Footer with Verified Record Button -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t-2 border-slate-900 font-sans">
+      <a id="modal-link-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-900 text-white font-mono font-bold text-xs uppercase tracking-wider hover:bg-slate-800 transition shadow-md flex items-center justify-center gap-2 cursor-pointer">
+        <span>🔗 Verify Public Record Source</span>
         <span>↗</span>
       </a>
-      <button onclick="closeArticleModal()" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-slate-800 text-slate-300 font-mono text-xs hover:bg-slate-700 hover:text-white transition cursor-pointer">
-        ✕ Close Briefing
+      <button onclick="closeArticleModal()" class="w-full sm:w-auto px-4 py-2 rounded-lg bg-slate-200 text-slate-700 font-mono text-xs hover:bg-slate-300 hover:text-black transition cursor-pointer font-bold">
+        ✕ Dismiss
       </button>
     </div>
   </div>
