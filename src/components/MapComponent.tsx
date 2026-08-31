@@ -177,24 +177,18 @@ export const MapComponent: React.FC<MapComponentProps> = ({
     }
 
     if (followUser) {
-      const targetZoom = activeRoute ? 18 : 17.5;
       const currentZoom = map.getZoom();
-      
-      if (currentZoom < targetZoom) {
-        map.setZoom(targetZoom, { animate: false });
-      }
 
       // Offset user location towards the lower center of the screen
       // so the top navigation banner doesn't cover the road ahead
-      const zoomForProject = Math.max(map.getZoom(), targetZoom);
-      const point = map.project(userLatLng, zoomForProject);
-      // Shift viewpoint 160px north (up) so the car sits in the bottom half of the screen
+      const point = map.project(userLatLng, currentZoom);
+      // Shift viewpoint 140px north (up) so the car sits in the bottom half of the screen
       const offsetPoint = point.subtract([0, 140]);
-      const targetCenter = map.unproject(offsetPoint, zoomForProject);
+      const targetCenter = map.unproject(offsetPoint, currentZoom);
 
-      map.panTo(targetCenter, { animate: true, duration: 0.6 });
+      map.panTo(targetCenter, { animate: true, duration: 0.4 });
     }
-  }, [gpsState, followUser, activeRoute]);
+  }, [gpsState, followUser]);
 
   // Render Camera Markers with Directional Vision Cones
   useEffect(() => {
