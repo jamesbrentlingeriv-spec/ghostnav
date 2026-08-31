@@ -9,6 +9,112 @@ export interface GeocodingResult {
   category?: string;
 }
 
+export const LOCAL_BUSINESS_REGISTRY: {
+  name: string;
+  aliases: string[];
+  address: string;
+  lat: number;
+  lon: number;
+  category: string;
+}[] = [
+  {
+    name: "Pal Optical & Eye Care",
+    aliases: ["pal optical", "pal", "pal eye", "pal optician", "1555 east new circle", "1555 e new circle", "pal optical lexington"],
+    address: "1555 E New Circle Rd #146, Lexington, KY 40509",
+    lat: 38.0185,
+    lon: -84.4544,
+    category: "Optician & Eye Care"
+  },
+  {
+    name: "Trader Joe's",
+    aliases: ["trader joes", "trader joe", "trader"],
+    address: "2326 Nicholasville Rd, Lexington, KY 40503",
+    lat: 38.0068,
+    lon: -84.5242,
+    category: "Grocery"
+  },
+  {
+    name: "Costco Wholesale",
+    aliases: ["costco", "costco wholesale"],
+    address: "540 E New Circle Rd, Lexington, KY 40505",
+    lat: 38.0620,
+    lon: -84.4680,
+    category: "Wholesale & Department Store"
+  },
+  {
+    name: "Fayette Mall",
+    aliases: ["fayette mall", "fayette", "mall"],
+    address: "3401 Nicholasville Rd, Lexington, KY 40503",
+    lat: 37.9920,
+    lon: -84.5290,
+    category: "Shopping Mall"
+  },
+  {
+    name: "The Summit at Fritz Farm",
+    aliases: ["the summit", "fritz farm", "summit"],
+    address: "120 Summit At Fritz Farm, Lexington, KY 40517",
+    lat: 37.9820,
+    lon: -84.5260,
+    category: "Shopping Center"
+  },
+  {
+    name: "Hamburg Pavilion Shopping Hub",
+    aliases: ["hamburg", "hamburg pavilion", "hamburg place"],
+    address: "Sir Barton Way, Lexington, KY 40509",
+    lat: 38.0315,
+    lon: -84.4230,
+    category: "Shopping Hub"
+  },
+  {
+    name: "UK Chandler Hospital",
+    aliases: ["uk hospital", "chandler hospital", "uk medical", "chandler"],
+    address: "1000 S Limestone, Lexington, KY 40536",
+    lat: 38.0305,
+    lon: -84.5100,
+    category: "Medical Center"
+  },
+  {
+    name: "Baptist Health Lexington",
+    aliases: ["baptist health", "baptist hospital", "baptist"],
+    address: "1740 Nicholasville Rd, Lexington, KY 40503",
+    lat: 38.0165,
+    lon: -84.5185,
+    category: "Hospital"
+  },
+  {
+    name: "Saint Joseph Hospital",
+    aliases: ["st joseph", "saint joseph", "st joe"],
+    address: "1 St Joseph Dr, Lexington, KY 40504",
+    lat: 38.0280,
+    lon: -84.5320,
+    category: "Hospital"
+  },
+  {
+    name: "Kroger (Euclid Ave / Chevy Chase)",
+    aliases: ["kroger euclid", "chevy chase kroger", "kroger"],
+    address: "704 Euclid Ave, Lexington, KY 40502",
+    lat: 38.0325,
+    lon: -84.4930,
+    category: "Supermarket"
+  },
+  {
+    name: "Target (Reynolds Rd)",
+    aliases: ["target reynolds", "fayette target", "target"],
+    address: "131 W Reynolds Rd, Lexington, KY 40503",
+    lat: 37.9880,
+    lon: -84.5340,
+    category: "Department Store"
+  },
+  {
+    name: "Target (Hamburg)",
+    aliases: ["target hamburg", "hamburg target"],
+    address: "1940 Pavillion Way, Lexington, KY 40509",
+    lat: 38.0295,
+    lon: -84.4260,
+    category: "Department Store"
+  }
+];
+
 class GeocodingService {
   private cache: Map<string, GeocodingResult[]> = new Map();
 
@@ -27,20 +133,45 @@ class GeocodingService {
 
     const results: GeocodingResult[] = [];
     const seenIds = new Set<string>();
+    const lowerQ = cleanQuery.toLowerCase();
 
-    // 1. Check preset locations
+    // 1. Check curated Local Business & POI Registry
+    for (const biz of LOCAL_BUSINESS_REGISTRY) {
+      const matchName = biz.name.toLowerCase().includes(lowerQ);
+      const matchAlias = biz.aliases.some((alias) => lowerQ.includes(alias) || alias.includes(lowerQ));
+      const matchAddr = biz.address.toLowerCase().includes(lowerQ);
+
+      if (matchName || matchAlias || matchAddr) {
+        const id = 'biz-' + biz.name;
+        if (!seenIds.has(id)) {
+          seenIds.add(id);
+          results.push({
+            id,
+            name: biz.name,
+            formattedAddress: biz.address,
+            latitude: biz.lat,
+            longitude: biz.lon,
+            category: biz.category,
+          });
+        }
+      }
+    }
+
+    // 2. Check preset locations
     for (const preset of PRESET_DESTINATIONS) {
-      if (preset.name.toLowerCase().includes(cleanQuery.toLowerCase())) {
+      if (preset.name.toLowerCase().includes(lowerQ)) {
         const id = 'preset-' + preset.name;
-        seenIds.add(id);
-        results.push({
-          id,
-          name: preset.name,
-          formattedAddress: preset.name + ', Lexington, KY',
-          latitude: preset.coords.latitude,
-          longitude: preset.coords.longitude,
-          category: 'Landmark',
-        });
+        if (!seenIds.has(id)) {
+          seenIds.add(id);
+          results.push({
+            id,
+            name: preset.name,
+            formattedAddress: preset.name + ', Lexington, KY',
+            latitude: preset.coords.latitude,
+            longitude: preset.coords.longitude,
+            category: 'Landmark',
+          });
+        }
       }
     }
 

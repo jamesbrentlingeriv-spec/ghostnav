@@ -112,12 +112,14 @@ export const ROAD_EDGES: RoadEdge[] = [
 ];
 
 export const PRESET_DESTINATIONS = [
+  { name: "Pal Optical & Eye Care (1555 E New Circle Rd)", coords: { latitude: 38.0185, longitude: -84.4544 } },
   { name: "Rupp Arena & Central Bank Center", coords: { latitude: 38.0445, longitude: -84.5045 } },
   { name: "University of Kentucky (Main Campus)", coords: { latitude: 38.0375, longitude: -84.5030 } },
   { name: "UK Chandler Medical Center", coords: { latitude: 38.0305, longitude: -84.5100 } },
   { name: "Downtown Lexington (Main & Lime)", coords: { latitude: 38.0450, longitude: -84.4975 } },
   { name: "The Summit at Fritz Farm / Nicholasville", coords: { latitude: 38.0015, longitude: -84.5245 } },
   { name: "Hamburg Pavilion / I-75 Hub", coords: { latitude: 38.0315, longitude: -84.4230 } },
+  { name: "Fayette Mall & Nicholasville Rd", coords: { latitude: 37.9920, longitude: -84.5290 } },
   { name: "Richmond Road Commercial Corridor", coords: { latitude: 38.0165, longitude: -84.4625 } },
   { name: "North Broadway / New Circle District", coords: { latitude: 38.0695, longitude: -84.4840 } }
 ];
