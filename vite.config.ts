@@ -10,6 +10,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         app: resolve(__dirname, "app/index.html"),
         appDirect: resolve(__dirname, "app.html"),
+        dossierDir: resolve(__dirname, "dossier/index.html"),
         dossier: resolve(__dirname, "dossier.html"),
         website: resolve(__dirname, "website/index.html"),
         websiteDossier: resolve(__dirname, "website/dossier.html"),

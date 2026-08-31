@@ -1,4 +1,3 @@
 # Cloudflare Pages Routing Rules
 /console /app.html 200
 /terminal /app.html 200
-/dossier /dossier.html 200
