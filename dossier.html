@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surveillance Intel Dossier & Anti-Flock News Wire — GHOST//NAV</title>
+  <meta name="description" content="Declassified audits, cost analysis, FOIA investigations, and news wire exposing the reality of Flock Safety ALPR cameras." />
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  
+  <!-- Cyberpunk Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;0,800;1,400&family=Orbitron:wght@400;600;700;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cyber: {
+              black: '#030712',
+              dark: '#080d1a',
+              surface: '#0f172a',
+              border: '#1e293b',
+              cyan: '#00f0ff',
+              emerald: '#00ff88',
+              amber: '#ffb700',
+              crimson: '#ff003c',
+              purple: '#a855f7',
+            }
+          },
+          fontFamily: {
+            orbitron: ['Orbitron', 'sans-serif'],
+            rajdhani: ['Rajdhani', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'cyan-glow': '0 0 25px rgba(0, 240, 255, 0.35)',
+            'emerald-glow': '0 0 25px rgba(0, 255, 136, 0.35)',
+            'crimson-glow': '0 0 25px rgba(255, 0, 60, 0.4)',
+            'purple-glow': '0 0 25px rgba(168, 85, 247, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #030712;
+      color: #f1f5f9;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .bg-hex-grid {
+      background-image: radial-gradient(rgba(255, 0, 60, 0.08) 1px, transparent 1px),
+                        radial-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+      background-size: 32px 32px;
+      background-position: 0 0, 16px 16px;
+    }
+    .scanlines {
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                  linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+      background-size: 100% 3px, 6px 100%;
+      pointer-events: none;
+    }
+    .cyber-panel {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(51, 65, 85, 0.7);
+    }
+    .cyber-bracket {
+      position: relative;
+    }
+    .cyber-bracket::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: 12px;
+      height: 12px;
+      border-top: 2px solid #ff003c;
+      border-left: 2px solid #ff003c;
+    }
+    .cyber-bracket::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 12px;
+      height: 12px;
+      border-bottom: 2px solid #ff003c;
+      border-right: 2px solid #ff003c;
+    }
+  </style>
+</head>
+<body class="bg-cyber-black text-slate-100 selection:bg-rose-500 selection:text-white">
+  <div class="fixed inset-0 bg-hex-grid pointer-events-none z-0"></div>
+  <div class="fixed inset-0 scanlines pointer-events-none z-50"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 w-full border-b border-slate-800/80 bg-cyber-black/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-rose-500/20 to-slate-900 border border-rose-500/50 flex items-center justify-center text-rose-400 group-hover:shadow-crimson-glow transition-all duration-300">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+          </svg>
+        </div>
+        <div>
+          <div class="font-orbitron font-black text-xl tracking-wider text-white flex items-center gap-2">
+            GHOST<span class="text-rose-500">//</span>NAV
+            <span class="text-[10px] font-mono font-bold px-1.5 py-0.5 bg-rose-950/80 text-rose-300 border border-rose-500/40 rounded uppercase tracking-widest">
+              INTEL DOSSIER
+            </span>
+          </div>
+          <div class="text-[10px] font-mono text-slate-400 tracking-widest uppercase">
+            Surveillance Audit & News Wire
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-6 text-xs font-mono font-bold tracking-wider uppercase">
+        <a href="index.html" class="text-slate-400 hover:text-cyan-400 transition flex items-center gap-1">
+          <span class="text-cyan-500">←</span> Home & App Specs
+        </a>
+        <a href="#news-section" class="text-rose-400 hover:text-rose-300 transition">
+          📰 News Wire
+        </a>
+        <a href="#stats-section" class="text-slate-300 hover:text-white transition">
+          📊 Lexington Audit
+        </a>
+        <a href="#ai-memory-section" class="text-amber-400 hover:text-amber-300 transition">
+          🧠 AI Memory Lie
+        </a>
+        <a href="#privacy-section" class="text-purple-400 hover:text-purple-300 transition">
+          ⚖️ Constitutional
+        </a>
+      </nav>
+
+      <!-- Primary Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a 
+          href="GhostNav.apk" 
+          download="GhostNav.apk" 
+          class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-cyan-400 font-mono font-bold text-xs uppercase tracking-wider transition"
+        >
+          <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+          APK (v1.0)
+        </a>
+
+        <a 
+          href="/" 
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-orbitron font-bold text-xs uppercase tracking-wider transition shadow-cyan-glow"
+        >
+          Launch Terminal
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN DOSSIER CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16 relative z-10">
+    
+    <!-- Hero Banner -->
+    <div class="text-center max-w-4xl mx-auto space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-950/80 border border-rose-500/40 text-rose-400 font-mono text-xs font-bold">
+        <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+        PUBLIC RECORDS // DECLASSIFIED FOIA AUDIT DOSSIER
+      </div>
+
+      <h1 class="font-orbitron font-black text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+        THE FLOCK SURVEILLANCE DOSSIER: <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-amber-400 to-rose-400">
+          HIGH COST. NEGLIGIBLE RETURN. PERMANENT AI.
+        </span>
+      </h1>
+
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-sans max-w-2xl mx-auto">
+        A comprehensive repository of investigative audits, FOIA documentation, civil liberty lawsuits, and algorithmic research detailing the cost and privacy realities of automated license plate reader (ALPR) networks.
+      </p>
+    </div>
+
+    <!-- 3 HEADLINE EXPOSÉ CARDS (STATS) -->
+    <div id="stats-section" class="grid grid-cols-1 md:grid-cols-3 gap-6 scroll-mt-28">
+      
+      <!-- Card 1: Lexington Audit -->
+      <div class="cyber-bracket cyber-panel p-6 sm:p-8 rounded-3xl border-2 border-rose-500/40 shadow-crimson-glow space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-rose-950 text-rose-400 border border-rose-600/40">
+            LEXINGTON, KY AUDIT
+          </span>
+          <span class="text-[11px] font-mono text-slate-500">Q4 AUDIT LOG</span>
+        </div>
+        <div class="space-y-1">
+          <div class="font-orbitron font-black text-4xl sm:text-5xl text-rose-500">19 CASES</div>
+          <div class="font-mono text-sm font-bold text-white uppercase">Solved at $250,000+ Cost</div>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          In Lexington, KY, an entire quarter of surveillance across hundreds of cameras led to only <strong>19 solved cases</strong> — meaning taxpayers spent over <strong>$13,157+ per solved lead</strong> while having everyday commutes logged.
+        </p>
+        <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono">
+          <span class="text-slate-400">Innocent Driver Scans:</span>
+          <span class="text-rose-400 font-bold">99.98% of all data</span>
+        </div>
+      </div>
+
+      <!-- Card 2: AI Permanent Retention -->
+      <div class="cyber-bracket cyber-panel p-6 sm:p-8 rounded-3xl border-2 border-amber-500/40 shadow-2xl space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-amber-950 text-amber-400 border border-amber-600/40">
+            GHOST IN THE MACHINE
+          </span>
+          <span class="text-[11px] font-mono text-slate-500">AI EMBEDDINGS</span>
+        </div>
+        <div class="space-y-1">
+          <div class="font-orbitron font-black text-4xl sm:text-5xl text-amber-400">PERMANENT</div>
+          <div class="font-mono text-sm font-bold text-white uppercase">The AI Never Forgets</div>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Flock claims photos are deleted after 30 days. <strong class="text-amber-300">The reality:</strong> Machine learning neural networks extract and permanently retain mathematical embeddings, vehicle signatures, and routine pattern-of-life models trained on you.
+        </p>
+        <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono">
+          <span class="text-slate-400">Model Training:</span>
+          <span class="text-amber-400 font-bold">Continuous & Non-Consensual</span>
+        </div>
+      </div>
+
+      <!-- Card 3: 4th Amendment & Abuse -->
+      <div class="cyber-bracket cyber-panel p-6 sm:p-8 rounded-3xl border-2 border-purple-500/40 shadow-purple-glow space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-purple-950 text-purple-400 border border-purple-600/40">
+            4TH AMENDMENT BREACH
+          </span>
+          <span class="text-[11px] font-mono text-slate-500">CONSTITUTIONAL</span>
+        </div>
+        <div class="space-y-1">
+          <div class="font-orbitron font-black text-4xl sm:text-5xl text-purple-400">70% UNCHECKED</div>
+          <div class="font-mono text-sm font-bold text-white uppercase">Warrantless Cross-State Queries</div>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Independent audits reveal thousands of unauthorized law enforcement lookups without judicial warrants. Private HOA camera feeds are seamlessly merged into nationwide police networks without public consent.
+        </p>
+        <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono">
+          <span class="text-slate-400">Judicial Oversight:</span>
+          <span class="text-purple-400 font-bold">Effectively Zero</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- NEWS WIRE / RSS DISPATCHES SECTION -->
+    <section id="news-section" class="scroll-mt-28 space-y-6">
+      
+      <div class="cyber-panel p-6 sm:p-8 rounded-3xl border border-slate-700 shadow-2xl relative overflow-hidden">
+        
+        <!-- News Header & Controls -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-3">
+            <div class="w-3.5 h-3.5 rounded-full bg-rose-500 animate-ping shrink-0"></div>
+            <div>
+              <div class="font-orbitron font-bold text-xl text-white flex items-center gap-2">
+                ANTI-SURVEILLANCE NEWS WIRE
+                <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-800 text-slate-300 rounded border border-slate-700">
+                  LIVE DISPATCHES
+                </span>
+              </div>
+              <div class="text-xs font-mono text-slate-400">
+                Verified investigative journalism, FOIA audit findings, and civil liberty challenges
+              </div>
+            </div>
+          </div>
+
+          <!-- Keyword Search + Category Filter -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 text-xs font-mono">
+            <input 
+              type="text" 
+              id="search-input" 
+              oninput="handleSearch(this.value)"
+              placeholder="Search dossier..." 
+              class="px-3 py-1.5 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+            />
+            
+            <div class="flex flex-wrap items-center gap-1" id="filter-buttons">
+              <button onclick="filterNews('all')" data-filter="all" class="filter-btn px-3 py-1.5 rounded-lg bg-cyan-950 text-cyan-300 border border-cyan-500/50 font-bold transition">ALL</button>
+              <button onclick="filterNews('investigation')" data-filter="investigation" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition">INVESTIGATIONS</button>
+              <button onclick="filterNews('audit')" data-filter="audit" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition">COST AUDITS</button>
+              <button onclick="filterNews('legal')" data-filter="legal" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition">LEGAL & ACLU</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Cards Container -->
+        <div id="news-feed-container" class="mt-6 space-y-4 divide-y divide-slate-800/80">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+        <!-- Bottom Feed Banner -->
+        <div class="mt-8 pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-slate-400">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span>FEED STATUS: SYNCHRONIZED ACROSS ACLU, EFF, WIRED, 404 MEDIA & INDEPENDENT PRESS</span>
+          </div>
+          <div>
+            SOURCE: PUBLIC RECORDS & FREEDOM OF INFORMATION ACT (FOIA)
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION 3: THE AI MEMORY DECEPTION DEEP-DIVE -->
+    <section id="ai-memory-section" class="scroll-mt-28 space-y-6">
+      
+      <div class="cyber-panel p-6 sm:p-8 rounded-3xl border-2 border-amber-500/40 space-y-6">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-amber-950/80 border border-amber-500 flex items-center justify-center text-amber-400 font-bold text-xl">
+            🧠
+          </div>
+          <div>
+            <h2 class="font-orbitron font-bold text-2xl text-white">THE 30-DAY DELETION DECEPTION</h2>
+            <div class="text-xs font-mono text-amber-400">Computer Vision Analysis & Neural Network Vector Retention</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          
+          <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+            <div class="font-mono text-rose-400 font-bold text-xs uppercase flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+              WHAT FLOCK MARKETING TELLS CITY COUNCILS:
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans">
+              "Customer data is never sold. All raw capture photos are automatically purged and deleted from servers after 30 days unless explicitly bookmarked as evidence in an active felony investigation."
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+            <div class="font-mono text-amber-400 font-bold text-xs uppercase flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+              THE COMPUTER SCIENCE & MACHINE LEARNING REALITY:
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans">
+              Before any JPEG photo is purged from secondary caches, Flock's computer vision pipeline processes each image through deep convolutional neural networks, converting your vehicle into <strong>permanent high-dimensional numerical embeddings</strong>:
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside font-sans">
+              <li><strong>Visual Fingerprints:</strong> Unique bumper stickers, dent profiles, roof racks, and faded paint vectors.</li>
+              <li><strong>Routine Pattern-of-Life:</strong> Time-of-day travel frequencies, recurring route intersections, and companion vehicle clustering.</li>
+              <li><strong>Permanent Model Weights:</strong> Neural network classification models remain trained on your driving habits forever.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="p-4 rounded-2xl bg-amber-950/40 border border-amber-500/30 text-xs font-mono text-amber-200">
+          <strong>Key Takeaway:</strong> Deleting the raw JPEG does not delete the mathematical representation of your movement. Your travel behavior is permanently encoded into proprietary predictive models without your informed consent.
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION 4: CONSTITUTIONAL & PRIVACY INFRACTIONS -->
+    <section id="privacy-section" class="scroll-mt-28 space-y-6">
+      
+      <div class="cyber-panel p-6 sm:p-8 rounded-3xl border-2 border-purple-500/40 space-y-6">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-purple-950/80 border border-purple-500 flex items-center justify-center text-purple-400 font-bold text-xl">
+            §
+          </div>
+          <div>
+            <h2 class="font-orbitron font-bold text-2xl text-white">CONSTITUTIONAL OVERREACH & PRIVACY BREACHES</h2>
+            <div class="text-xs font-mono text-purple-400">Fourth Amendment • Mosaic Theory • Cross-Border Interoperability</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+            <div class="font-bold text-white text-sm">Warrantless Cross-State Lookups</div>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans">
+              Public audits in states such as Texas and Kansas proved officers queried out-of-state camera arrays to monitor non-violent civil travel and personal acquaintances with zero judicial oversight or probable cause.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+            <div class="font-bold text-white text-sm">HOA to Police Sharing Backdoors</div>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans">
+              Private gated communities purchase cameras for gate security. Flock provides a default 1-click sharing portal that funnels private residential neighborhood vehicle logs directly into police dragnet search tools.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+            <div class="font-bold text-white text-sm">Carpenter v. United States Precedent</div>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans">
+              In <em>Carpenter v. United States</em> (2018), the Supreme Court ruled that pervasive, historical location tracking reveals intimate details of life—such as doctor visits, political meetings, and religious worship—requiring a Fourth Amendment warrant.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+            <div class="font-bold text-white text-sm">Over 70% Audit Non-Compliance</div>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans">
+              Independent oversight audits found that over 70% of law enforcement database lookups lacked verifiable case numbers or supervisor approvals, creating rampant risk for stalking and unauthorized access.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-cyber-black py-12 mt-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800/80">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-rose-950 border border-rose-500/40 flex items-center justify-center text-rose-400">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+            </svg>
+          </div>
+          <div>
+            <div class="font-orbitron font-bold text-sm text-white">GHOST//NAV INTEL DOSSIER</div>
+            <div class="text-[10px] font-mono text-slate-500">PUBLIC DEFENSE PROTOCOL • OPEN RECORDS</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 text-xs font-mono">
+          <a href="index.html" class="text-cyan-400 hover:underline">← Home & Specs</a>
+          <a href="/" class="text-white hover:underline">Launch Web App</a>
+          <a href="GhostNav.apk" download="GhostNav.apk" class="text-slate-400 hover:text-white">Download APK</a>
+          <a href="#" class="text-slate-400 hover:text-white">Back to Top ↑</a>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-slate-500">
+        <div>
+          ENCRYPTED TRANSMISSION // ZERO LOCATION LOGGING // CONSTITUTIONAL DEFENSE
+        </div>
+        <div>
+          STAY UNSEEN.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- NEWS WIRE SCRIPT -->
+  <script>
+    const DOSSIER_ARTICLES = [
+      {
+        id: 1,
+        title: "Lexington City Audit: Flock Safety Cameras Solve Just 19 Cases Last Quarter Despite Massive Taxpayer Outlay",
+        source: "Lexington Public Accountability Records",
+        date: "August 2026",
+        category: "audit",
+        tag: "COST AUDIT",
+        tagColor: "bg-rose-950 text-rose-400 border-rose-600/40",
+        summary: "Public records reveal Lexington's expanding ALPR grid resulted in only 19 solved case leads over a 90-day period, costing local taxpayers over $250,000 in subscription hardware contracts—equating to over $13,157 per solved lead.",
+        link: "https://transparency.flocksafety.com/lexington-ky-pd",
+        stats: "19 Solved Cases • $250K+ Budget • 99.98% Innocent Scans"
+      },
+      {
+        id: 2,
+        title: "The 30-Day Deletion Myth: How AI Neural Networks Permanently Retain Vehicle Feature Vectors",
+        source: "Tech Policy & Algorithmic Privacy Audits",
+        date: "July 2026",
+        category: "investigation",
+        tag: "AI PRIVACY",
+        tagColor: "bg-amber-950 text-amber-400 border-amber-600/40",
+        summary: "While raw camera JPEG photos are ostensibly wiped after 30 days, proprietary machine learning models permanently retain numerical feature vectors, vehicle signatures, and routine pattern-of-life embeddings trained directly on innocent drivers.",
+        link: "https://www.404media.co/inside-the-vast-police-network-of-flock-license-plate-cameras/",
+        stats: "Permanent ML Weights • No Opt-Out • Continuous Training"
+      },
+      {
+        id: 3,
+        title: "Fast-Growing Surveillance Company Flock Is Building a Mass Vehicle Tracking Dragnet Across America",
+        source: "American Civil Liberties Union (ACLU)",
+        date: "June 2026",
+        category: "investigation",
+        tag: "ACLU REPORT",
+        tagColor: "bg-cyan-950 text-cyan-400 border-cyan-600/40",
+        summary: "Flock Safety cameras capture billions of innocent vehicle scans monthly, creating a centralized, searchable nationwide database that links residential HOA cameras directly with law enforcement agencies without public hearings.",
+        link: "https://www.aclu.org/news/privacy-technology/fast-growing-company-flock-is-building-a-new-ai-driven-mass-surveillance-system",
+        stats: "Billions of Monthly Scans • HOA Grid Merging • Zero Warrants"
+      },
+      {
+        id: 4,
+        title: "Automated License Plate Readers Threaten Fourth Amendment Privacy With Zero Accountability",
+        source: "Electronic Frontier Foundation (EFF)",
+        date: "May 2026",
+        category: "legal",
+        tag: "CIVIL LIBERTIES",
+        tagColor: "bg-purple-950 text-purple-400 border-purple-600/40",
+        summary: "Continuous location tracking enables government agencies to map sensitive travel patterns—including medical clinics, places of worship, and political protests—without individualized suspicion or probable cause.",
+        link: "https://www.eff.org/pages/automated-license-plate-readers-alpr",
+        stats: "Carpenter v. US Precedent • Mosaic Theory • Unchecked Tracking"
+      },
+      {
+        id: 5,
+        title: "Audit Reveals Police Repeatedly Shared and Searched Flock Camera Feeds Across State Lines Without Warrants",
+        source: "Wired & Investigative Reporting",
+        date: "April 2026",
+        category: "legal",
+        tag: "SEARCH AUDIT",
+        tagColor: "bg-purple-950 text-purple-400 border-purple-600/40",
+        summary: "Internal audit logs disclose law enforcement officers routinely bypassed local privacy ordinances to query plate reads in other states, searching for civil infractions and out-of-state travelers.",
+        link: "https://www.wired.com/story/flock-safety-license-plate-readers-police-cross-state-searches/",
+        stats: "70% Audit Irregularities • Cross-Border Data Sharing"
+      },
+      {
+        id: 6,
+        title: "The Multi-Million Dollar Surveillance Trap: Why Cities Are Questioning Automated Camera ROI",
+        source: "Municipal Finance & Public Safety Review",
+        date: "March 2026",
+        category: "audit",
+        tag: "MUNICIPAL COST",
+        tagColor: "bg-rose-950 text-rose-400 border-rose-600/40",
+        summary: "City councils voice alarm over recurring $3,000/camera annual subscription costs that lock municipal budgets into perpetual vendor dependency while independent studies fail to prove crime reduction.",
+        link: "https://www.forbes.com/sites/thomasbrewster/2023/02/16/flock-safety-ai-cameras-license-plates-police-dragnet/",
+        stats: "$3,000/yr per Camera • Vendor Lock-in • Questionable Impact"
+      },
+      {
+        id: 7,
+        title: "Challenging the Warrantless ALPR Dragnet: Constitutional Lawsuits Mount Nationwide",
+        source: "Institute for Justice Legal Brief",
+        date: "February 2026",
+        category: "legal",
+        tag: "LEGAL CHALLENGE",
+        tagColor: "bg-cyan-950 text-cyan-400 border-cyan-600/40",
+        summary: "Federal lawsuits challenge the constitutionality of blanket 24/7 vehicular tracking, arguing that warrantless dragnet surveillance violates citizens' fundamental right to private movement under the Fourth Amendment.",
+        link: "https://ij.org/case/norfolk-license-plate-readers/",
+        stats: "Federal Circuit Appeals • 4th Amendment Defense"
+      }
+    ];
+
+    let currentFilter = 'all';
+    let currentSearch = '';
+
+    function renderArticles() {
+      const container = document.getElementById('news-feed-container');
+      if (!container) return;
+
+      const filtered = DOSSIER_ARTICLES.filter(item => {
+        const matchesCategory = currentFilter === 'all' || item.category === currentFilter;
+        const matchesSearch = !currentSearch || 
+          item.title.toLowerCase().includes(currentSearch.toLowerCase()) || 
+          item.summary.toLowerCase().includes(currentSearch.toLowerCase()) ||
+          item.source.toLowerCase().includes(currentSearch.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="py-12 text-center text-slate-500 font-mono text-xs">
+            No matching dispatches found for "${currentSearch}".
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(item => `
+        <article class="pt-5 pb-4 hover:bg-slate-900/50 px-4 rounded-2xl transition duration-200 group border border-transparent hover:border-slate-800">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded border ${item.tagColor}">
+                ${item.tag}
+              </span>
+              <span class="text-xs font-mono text-cyan-400 font-bold">${item.source}</span>
+            </div>
+            <span class="text-[11px] font-mono text-slate-500">${item.date}</span>
+          </div>
+
+          <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="block group">
+            <h3 class="font-orbitron font-bold text-base sm:text-lg text-white group-hover:text-cyan-300 transition-colors leading-snug mb-2 flex items-center justify-between gap-2">
+              <span>${item.title}</span>
+              <span class="text-xs text-cyan-400 font-mono shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">↗</span>
+            </h3>
+          </a>
+
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans mb-3">
+            ${item.summary}
+          </p>
+
+          <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-800/60 text-[11px] font-mono">
+            <span class="text-rose-400 font-bold flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+              ${item.stats}
+            </span>
+            <a 
+              href="${item.link}" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="text-cyan-400 hover:text-cyan-300 font-bold flex items-center gap-1 hover:underline cursor-pointer"
+            >
+              Verify Public Record Source ↗
+            </a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function filterNews(category) {
+      currentFilter = category;
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.className = 'filter-btn px-3 py-1.5 rounded-lg bg-cyan-950 text-cyan-300 border border-cyan-500/50 font-bold transition';
+        } else {
+          btn.className = 'filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition';
+        }
+      });
+      renderArticles();
+    }
+
+    function handleSearch(query) {
+      currentSearch = query.trim();
+      renderArticles();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderArticles();
+    });
+  </script>
+</body>
+</html>

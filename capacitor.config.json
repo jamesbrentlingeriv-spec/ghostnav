@@ -1,0 +1,11 @@
+{
+  "appId": "com.ghostnav.gps",
+  "appName": "GhostNav GPS",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  }
+}

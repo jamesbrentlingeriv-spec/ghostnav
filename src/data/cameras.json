@@ -1,0 +1,1444 @@
+[
+  {
+    "id": "OSM-8520915317",
+    "latitude": 38.058878,
+    "longitude": -84.511273,
+    "facing_degrees": 225,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-10848073235",
+    "latitude": 38.025317,
+    "longitude": -84.501872,
+    "facing_degrees": 160,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-10848073236",
+    "latitude": 38.0062,
+    "longitude": -84.485895,
+    "facing_degrees": 160,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-10848073237",
+    "latitude": 38.052459,
+    "longitude": -84.488323,
+    "facing_degrees": 40,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-10852612353",
+    "latitude": 38.019147,
+    "longitude": -84.505674,
+    "facing_degrees": 290,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12331056577",
+    "latitude": 38.033356,
+    "longitude": -84.524344,
+    "facing_degrees": 200,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12335116270",
+    "latitude": 38.041616,
+    "longitude": -84.42425,
+    "facing_degrees": 10,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338260684",
+    "latitude": 37.970723,
+    "longitude": -84.510202,
+    "facing_degrees": 35,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338263197",
+    "latitude": 38.022907,
+    "longitude": -84.512225,
+    "facing_degrees": 100,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338281769",
+    "latitude": 37.990192,
+    "longitude": -84.494977,
+    "facing_degrees": 150,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338284642",
+    "latitude": 38.017472,
+    "longitude": -84.548781,
+    "facing_degrees": 290,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338284645",
+    "latitude": 37.950758,
+    "longitude": -84.485681,
+    "facing_degrees": 315,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338287197",
+    "latitude": 38.033067,
+    "longitude": -84.52304,
+    "facing_degrees": 105,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338291721",
+    "latitude": 37.962509,
+    "longitude": -84.494579,
+    "facing_degrees": 125,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338291763",
+    "latitude": 37.982766,
+    "longitude": -84.494525,
+    "facing_degrees": 105,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338292520",
+    "latitude": 37.975885,
+    "longitude": -84.530333,
+    "facing_degrees": 180,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338321029",
+    "latitude": 38.029005,
+    "longitude": -84.509982,
+    "facing_degrees": 10,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338325999",
+    "latitude": 37.975352,
+    "longitude": -84.528101,
+    "facing_degrees": 100,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338326470",
+    "latitude": 38.026944,
+    "longitude": -84.534011,
+    "facing_degrees": 35,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338329018",
+    "latitude": 37.979085,
+    "longitude": -84.509945,
+    "facing_degrees": 180,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338336301",
+    "latitude": 37.966504,
+    "longitude": -84.534436,
+    "facing_degrees": 100,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338348059",
+    "latitude": 37.974192,
+    "longitude": -84.498151,
+    "facing_degrees": 220,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338357143",
+    "latitude": 38.033287,
+    "longitude": -84.508792,
+    "facing_degrees": 355,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338358987",
+    "latitude": 38.026161,
+    "longitude": -84.506152,
+    "facing_degrees": 210,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12338370101",
+    "latitude": 38.059276,
+    "longitude": -84.501334,
+    "facing_degrees": 185,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12340789485",
+    "latitude": 38.041839,
+    "longitude": -84.446783,
+    "facing_degrees": 185,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341076768",
+    "latitude": 37.993213,
+    "longitude": -84.460201,
+    "facing_degrees": 25,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341076769",
+    "latitude": 38.009386,
+    "longitude": -84.422156,
+    "facing_degrees": 315,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341080649",
+    "latitude": 37.972354,
+    "longitude": -84.472888,
+    "facing_degrees": 300,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341080650",
+    "latitude": 37.99989,
+    "longitude": -84.409714,
+    "facing_degrees": 130,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341083447",
+    "latitude": 37.995234,
+    "longitude": -84.439494,
+    "facing_degrees": 205,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341083885",
+    "latitude": 37.983619,
+    "longitude": -84.474118,
+    "facing_degrees": 200,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341083886",
+    "latitude": 37.964694,
+    "longitude": -84.391919,
+    "facing_degrees": 295,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341083887",
+    "latitude": 37.995737,
+    "longitude": -84.394749,
+    "facing_degrees": 15,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341083890",
+    "latitude": 38.039383,
+    "longitude": -84.428804,
+    "facing_degrees": 145,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341097938",
+    "latitude": 37.967224,
+    "longitude": -84.477088,
+    "facing_degrees": 275,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341362288",
+    "latitude": 38.024896,
+    "longitude": -84.406254,
+    "facing_degrees": 130,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341390600",
+    "latitude": 38.059894,
+    "longitude": -84.465681,
+    "facing_degrees": 240,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341394293",
+    "latitude": 38.007895,
+    "longitude": -84.452462,
+    "facing_degrees": 40,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341395401",
+    "latitude": 37.983586,
+    "longitude": -84.426518,
+    "facing_degrees": 160,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341395482",
+    "latitude": 38.067966,
+    "longitude": -84.472269,
+    "facing_degrees": 40,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341396253",
+    "latitude": 38.017593,
+    "longitude": -84.456338,
+    "facing_degrees": 95,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341401191",
+    "latitude": 38.01947,
+    "longitude": -84.416931,
+    "facing_degrees": 320,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341401778",
+    "latitude": 38.042678,
+    "longitude": -84.448568,
+    "facing_degrees": 10,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341409882",
+    "latitude": 38.011674,
+    "longitude": -84.457612,
+    "facing_degrees": 120,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341415941",
+    "latitude": 38.086255,
+    "longitude": -84.467701,
+    "facing_degrees": 275,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341416103",
+    "latitude": 38.04585,
+    "longitude": -84.453497,
+    "facing_degrees": 80,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341417988",
+    "latitude": 38.048527,
+    "longitude": -84.535967,
+    "facing_degrees": 245,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341422262",
+    "latitude": 38.009575,
+    "longitude": -84.453882,
+    "facing_degrees": 40,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341422270",
+    "latitude": 38.06519,
+    "longitude": -84.470373,
+    "facing_degrees": 210,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341423702",
+    "latitude": 38.028456,
+    "longitude": -84.448145,
+    "facing_degrees": 0,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341430185",
+    "latitude": 38.024721,
+    "longitude": -84.454225,
+    "facing_degrees": 270,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341430198",
+    "latitude": 38.075127,
+    "longitude": -84.457752,
+    "facing_degrees": 220,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341677395",
+    "latitude": 38.041097,
+    "longitude": -84.479044,
+    "facing_degrees": 85,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341677396",
+    "latitude": 38.031379,
+    "longitude": -84.490044,
+    "facing_degrees": 300,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341683483",
+    "latitude": 38.039245,
+    "longitude": -84.51549,
+    "facing_degrees": 315,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341690257",
+    "latitude": 38.067236,
+    "longitude": -84.472513,
+    "facing_degrees": 125,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341694752",
+    "latitude": 38.043825,
+    "longitude": -84.507578,
+    "facing_degrees": 195,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341698360",
+    "latitude": 38.097493,
+    "longitude": -84.486277,
+    "facing_degrees": 175,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341701553",
+    "latitude": 38.051508,
+    "longitude": -84.494906,
+    "facing_degrees": 130,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341702756",
+    "latitude": 38.047743,
+    "longitude": -84.501761,
+    "facing_degrees": 330,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341704704",
+    "latitude": 38.04226,
+    "longitude": -84.502711,
+    "facing_degrees": 45,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341771316",
+    "latitude": 38.049975,
+    "longitude": -84.523128,
+    "facing_degrees": 350,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341954513",
+    "latitude": 38.04965,
+    "longitude": -84.523347,
+    "facing_degrees": 160,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341959425",
+    "latitude": 38.046457,
+    "longitude": -84.554701,
+    "facing_degrees": 70,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12341970565",
+    "latitude": 38.047166,
+    "longitude": -84.54883,
+    "facing_degrees": 330,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12342256658",
+    "latitude": 38.042201,
+    "longitude": -84.466564,
+    "facing_degrees": 230,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12342282692",
+    "latitude": 38.042774,
+    "longitude": -84.466372,
+    "facing_degrees": 330,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12342304642",
+    "latitude": 38.046981,
+    "longitude": -84.551853,
+    "facing_degrees": 340,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12342309643",
+    "latitude": 38.042592,
+    "longitude": -84.47063,
+    "facing_degrees": 335,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12342323306",
+    "latitude": 38.044586,
+    "longitude": -84.485742,
+    "facing_degrees": 270,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12342324689",
+    "latitude": 37.956564,
+    "longitude": -84.539136,
+    "facing_degrees": 185,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12342324690",
+    "latitude": 38.051293,
+    "longitude": -84.475424,
+    "facing_degrees": 207,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12342325933",
+    "latitude": 38.052861,
+    "longitude": -84.550804,
+    "facing_degrees": 185,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12342346358",
+    "latitude": 38.062842,
+    "longitude": -84.514636,
+    "facing_degrees": 10,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12342354494",
+    "latitude": 38.057788,
+    "longitude": -84.523994,
+    "facing_degrees": 10,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12344698681",
+    "latitude": 37.963121,
+    "longitude": -84.535534,
+    "facing_degrees": 10,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12349649063",
+    "latitude": 37.986233,
+    "longitude": -84.525912,
+    "facing_degrees": 115,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12363414685",
+    "latitude": 38.043068,
+    "longitude": -84.501053,
+    "facing_degrees": 115,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12363414686",
+    "latitude": 38.039433,
+    "longitude": -84.501753,
+    "facing_degrees": 120,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12427142750",
+    "latitude": 38.038015,
+    "longitude": -84.464951,
+    "facing_degrees": 110,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12427158682",
+    "latitude": 38.031382,
+    "longitude": -84.501419,
+    "facing_degrees": 280,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12442412879",
+    "latitude": 38.019027,
+    "longitude": -84.504383,
+    "facing_degrees": 40,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12442412880",
+    "latitude": 38.028151,
+    "longitude": -84.500198,
+    "facing_degrees": 55,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12624175138",
+    "latitude": 38.01909,
+    "longitude": -84.434712,
+    "facing_degrees": 215,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12840803711",
+    "latitude": 38.04696,
+    "longitude": -84.496193,
+    "facing_degrees": 50,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12840803712",
+    "latitude": 38.047784,
+    "longitude": -84.497327,
+    "facing_degrees": 130,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12964505044",
+    "latitude": 37.985904,
+    "longitude": -84.459717,
+    "facing_degrees": 115,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-12971134828",
+    "latitude": 37.992843,
+    "longitude": -84.460817,
+    "facing_degrees": 190,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13115568624",
+    "latitude": 37.97424,
+    "longitude": -84.59246,
+    "facing_degrees": 340,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13174399096",
+    "latitude": 38.065039,
+    "longitude": -84.449367,
+    "facing_degrees": 180,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13192564846",
+    "latitude": 38.072759,
+    "longitude": -84.481057,
+    "facing_degrees": 5,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13192564847",
+    "latitude": 37.985375,
+    "longitude": -84.498607,
+    "facing_degrees": 205,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13194657834",
+    "latitude": 38.018484,
+    "longitude": -84.459975,
+    "facing_degrees": 0,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13283627870",
+    "latitude": 38.072675,
+    "longitude": -84.480633,
+    "facing_degrees": 170,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13283634751",
+    "latitude": 38.071754,
+    "longitude": -84.475708,
+    "facing_degrees": 2,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13290438677",
+    "latitude": 37.986037,
+    "longitude": -84.460791,
+    "facing_degrees": 260,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13315576402",
+    "latitude": 38.102058,
+    "longitude": -84.484787,
+    "facing_degrees": 333,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13319114401",
+    "latitude": 37.98894,
+    "longitude": -84.507024,
+    "facing_degrees": 163,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13329291501",
+    "latitude": 38.057434,
+    "longitude": -84.501288,
+    "facing_degrees": 149,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13346193403",
+    "latitude": 38.010053,
+    "longitude": -84.44358,
+    "facing_degrees": 274,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13353913401",
+    "latitude": 38.017455,
+    "longitude": -84.548039,
+    "facing_degrees": 30,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13382155301",
+    "latitude": 38.013798,
+    "longitude": -84.522021,
+    "facing_degrees": 289,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13382155401",
+    "latitude": 38.013622,
+    "longitude": -84.522131,
+    "facing_degrees": 284,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13382528201",
+    "latitude": 38.090124,
+    "longitude": -84.537553,
+    "facing_degrees": 279,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13387132201",
+    "latitude": 38.011473,
+    "longitude": -84.516743,
+    "facing_degrees": 262,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13416372201",
+    "latitude": 38.067061,
+    "longitude": -84.472294,
+    "facing_degrees": 91,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13416372401",
+    "latitude": 38.041501,
+    "longitude": -84.424701,
+    "facing_degrees": 232,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13421417601",
+    "latitude": 38.077938,
+    "longitude": -84.549169,
+    "facing_degrees": 197,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13421451001",
+    "latitude": 38.065077,
+    "longitude": -84.524024,
+    "facing_degrees": 180,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13426853301",
+    "latitude": 38.043612,
+    "longitude": -84.503273,
+    "facing_degrees": 302,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13436098510",
+    "latitude": 38.026697,
+    "longitude": -84.536542,
+    "facing_degrees": 200,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13436099619",
+    "latitude": 38.026234,
+    "longitude": -84.537327,
+    "facing_degrees": 60,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13437922102",
+    "latitude": 37.995036,
+    "longitude": -84.529453,
+    "facing_degrees": 281,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13437932001",
+    "latitude": 37.995227,
+    "longitude": -84.533376,
+    "facing_degrees": 74,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13437932201",
+    "latitude": 37.996316,
+    "longitude": -84.533467,
+    "facing_degrees": 84,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13437932401",
+    "latitude": 37.997018,
+    "longitude": -84.533077,
+    "facing_degrees": 118,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13437938901",
+    "latitude": 37.994156,
+    "longitude": -84.529996,
+    "facing_degrees": 277,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13438713667",
+    "latitude": 38.010502,
+    "longitude": -84.452415,
+    "facing_degrees": 130,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13451280501",
+    "latitude": 38.018869,
+    "longitude": -84.416768,
+    "facing_degrees": 149,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13456662201",
+    "latitude": 38.017039,
+    "longitude": -84.45885,
+    "facing_degrees": 223,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13456662202",
+    "latitude": 38.016837,
+    "longitude": -84.458161,
+    "facing_degrees": 100,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13461324501",
+    "latitude": 38.021485,
+    "longitude": -84.528782,
+    "facing_degrees": 148,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13461343501",
+    "latitude": 38.058816,
+    "longitude": -84.501202,
+    "facing_degrees": 103,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13465049101",
+    "latitude": 38.004395,
+    "longitude": -84.569319,
+    "facing_degrees": 138,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13465049201",
+    "latitude": 38.004022,
+    "longitude": -84.568783,
+    "facing_degrees": 31,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13505162301",
+    "latitude": 38.095912,
+    "longitude": -84.513121,
+    "facing_degrees": 64,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13505164901",
+    "latitude": 38.036148,
+    "longitude": -84.423772,
+    "facing_degrees": 23,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13505166801",
+    "latitude": 38.04098,
+    "longitude": -84.424589,
+    "facing_degrees": 163,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13509742809",
+    "latitude": 37.980339,
+    "longitude": -84.532532,
+    "facing_degrees": 274,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13509743115",
+    "latitude": 37.980337,
+    "longitude": -84.532506,
+    "facing_degrees": 192,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13509772901",
+    "latitude": 37.978215,
+    "longitude": -84.533652,
+    "facing_degrees": 213,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13517004901",
+    "latitude": 37.996979,
+    "longitude": -84.468125,
+    "facing_degrees": 279,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13570086901",
+    "latitude": 38.015661,
+    "longitude": -84.460268,
+    "facing_degrees": 359,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13570087601",
+    "latitude": 38.015729,
+    "longitude": -84.460255,
+    "facing_degrees": 114,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13570089301",
+    "latitude": 38.014933,
+    "longitude": -84.459428,
+    "facing_degrees": 12,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13606410701",
+    "latitude": 38.026361,
+    "longitude": -84.474512,
+    "facing_degrees": 244,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13606410901",
+    "latitude": 38.018287,
+    "longitude": -84.465085,
+    "facing_degrees": 206,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13619009304",
+    "latitude": 38.042402,
+    "longitude": -84.504892,
+    "facing_degrees": 218,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13619013101",
+    "latitude": 38.041531,
+    "longitude": -84.503789,
+    "facing_degrees": 45,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13635255101",
+    "latitude": 38.02647,
+    "longitude": -84.538247,
+    "facing_degrees": 0,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13653013102",
+    "latitude": 37.987162,
+    "longitude": -84.563288,
+    "facing_degrees": 277,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13663651802",
+    "latitude": 38.043505,
+    "longitude": -84.492136,
+    "facing_degrees": 196,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13663660701",
+    "latitude": 38.058967,
+    "longitude": -84.499481,
+    "facing_degrees": 139,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13669581534",
+    "latitude": 38.005713,
+    "longitude": -84.424192,
+    "facing_degrees": 20,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13669581567",
+    "latitude": 38.007004,
+    "longitude": -84.425884,
+    "facing_degrees": 105,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13669581569",
+    "latitude": 38.007095,
+    "longitude": -84.426014,
+    "facing_degrees": 90,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13682471001",
+    "latitude": 38.056194,
+    "longitude": -84.48896,
+    "facing_degrees": 138,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13682982914",
+    "latitude": 38.072606,
+    "longitude": -84.50543,
+    "facing_degrees": 160,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13745298702",
+    "latitude": 38.108935,
+    "longitude": -84.535675,
+    "facing_degrees": 165,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13745790904",
+    "latitude": 38.094861,
+    "longitude": -84.527512,
+    "facing_degrees": 258,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13746093401",
+    "latitude": 38.057899,
+    "longitude": -84.498331,
+    "facing_degrees": 132,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13750830801",
+    "latitude": 38.081071,
+    "longitude": -84.5089,
+    "facing_degrees": 145,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13751092501",
+    "latitude": 38.061819,
+    "longitude": -84.485657,
+    "facing_degrees": 302,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13751115501",
+    "latitude": 38.059311,
+    "longitude": -84.483975,
+    "facing_degrees": 127,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13751841201",
+    "latitude": 38.089332,
+    "longitude": -84.553144,
+    "facing_degrees": 21,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13753717601",
+    "latitude": 38.048337,
+    "longitude": -84.523336,
+    "facing_degrees": 150,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13789756501",
+    "latitude": 38.010852,
+    "longitude": -84.450836,
+    "facing_degrees": 211,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13790279501",
+    "latitude": 37.986611,
+    "longitude": -84.455266,
+    "facing_degrees": 181,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13790280201",
+    "latitude": 37.975862,
+    "longitude": -84.463586,
+    "facing_degrees": 111,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13835222702",
+    "latitude": 37.998537,
+    "longitude": -84.495608,
+    "facing_degrees": 76,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13841428736",
+    "latitude": 38.040864,
+    "longitude": -84.518129,
+    "facing_degrees": 290,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13841428737",
+    "latitude": 38.041159,
+    "longitude": -84.522702,
+    "facing_degrees": 185,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13841428738",
+    "latitude": 38.040689,
+    "longitude": -84.522795,
+    "facing_degrees": 30,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13841428739",
+    "latitude": 38.041188,
+    "longitude": -84.518968,
+    "facing_degrees": 100,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13841428740",
+    "latitude": 38.041036,
+    "longitude": -84.516998,
+    "facing_degrees": 290,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13841428741",
+    "latitude": 38.043057,
+    "longitude": -84.515054,
+    "facing_degrees": 325,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13841428742",
+    "latitude": 38.043912,
+    "longitude": -84.523688,
+    "facing_degrees": 70,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13844824501",
+    "latitude": 37.978882,
+    "longitude": -84.498482,
+    "facing_degrees": 278,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13892663250",
+    "latitude": 38.055895,
+    "longitude": -84.477835,
+    "facing_degrees": 50,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13894739556",
+    "latitude": 38.053564,
+    "longitude": -84.480762,
+    "facing_degrees": 205,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13902439942",
+    "latitude": 38.057826,
+    "longitude": -84.480678,
+    "facing_degrees": 30,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13902445518",
+    "latitude": 38.06035,
+    "longitude": -84.463605,
+    "facing_degrees": 35,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13915091886",
+    "latitude": 38.03425,
+    "longitude": -84.525347,
+    "facing_degrees": 275,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13931949001",
+    "latitude": 37.987494,
+    "longitude": -84.493345,
+    "facing_degrees": 59,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13945496816",
+    "latitude": 37.973315,
+    "longitude": -84.498864,
+    "facing_degrees": 60,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13947957201",
+    "latitude": 37.983022,
+    "longitude": -84.49486,
+    "facing_degrees": 270,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13960823491",
+    "latitude": 37.984718,
+    "longitude": -84.497322,
+    "facing_degrees": 210,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13968289008",
+    "latitude": 38.069097,
+    "longitude": -84.528537,
+    "facing_degrees": 290,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13986314502",
+    "latitude": 38.021521,
+    "longitude": -84.576026,
+    "facing_degrees": 280,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-13986318401",
+    "latitude": 38.021529,
+    "longitude": -84.576022,
+    "facing_degrees": 52,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14004850901",
+    "latitude": 37.963186,
+    "longitude": -84.476221,
+    "facing_degrees": 339,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14005697701",
+    "latitude": 37.964781,
+    "longitude": -84.4753,
+    "facing_degrees": 229,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14006204701",
+    "latitude": 37.990861,
+    "longitude": -84.522842,
+    "facing_degrees": 200,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14006286902",
+    "latitude": 37.960129,
+    "longitude": -84.479631,
+    "facing_degrees": 57,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14020912502",
+    "latitude": 37.991168,
+    "longitude": -84.523714,
+    "facing_degrees": 201,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14027405802",
+    "latitude": 37.97697,
+    "longitude": -84.45971,
+    "facing_degrees": 240,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14047930201",
+    "latitude": 38.083345,
+    "longitude": -84.542993,
+    "facing_degrees": 33,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14050135401",
+    "latitude": 37.97407,
+    "longitude": -84.496937,
+    "facing_degrees": 55,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14052487701",
+    "latitude": 38.072069,
+    "longitude": -84.503821,
+    "facing_degrees": 0,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14066802101",
+    "latitude": 38.027579,
+    "longitude": -84.536708,
+    "facing_degrees": 230,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14066984001",
+    "latitude": 37.965535,
+    "longitude": -84.467157,
+    "facing_degrees": 198,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14068768601",
+    "latitude": 38.070721,
+    "longitude": -84.477415,
+    "facing_degrees": 203,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14084437101",
+    "latitude": 37.969494,
+    "longitude": -84.487064,
+    "facing_degrees": 33,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14088156102",
+    "latitude": 38.017247,
+    "longitude": -84.463011,
+    "facing_degrees": 144,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14088157202",
+    "latitude": 38.017409,
+    "longitude": -84.462838,
+    "facing_degrees": 191,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14088161401",
+    "latitude": 38.01711,
+    "longitude": -84.462463,
+    "facing_degrees": 276,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14092084501",
+    "latitude": 37.97149,
+    "longitude": -84.509659,
+    "facing_degrees": 316,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14112319601",
+    "latitude": 38.061125,
+    "longitude": -84.461654,
+    "facing_degrees": 237,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14112336002",
+    "latitude": 38.050544,
+    "longitude": -84.45532,
+    "facing_degrees": 164,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14112351201",
+    "latitude": 38.050378,
+    "longitude": -84.454763,
+    "facing_degrees": 325,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14112559201",
+    "latitude": 38.050224,
+    "longitude": -84.45463,
+    "facing_degrees": 308,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14113640203",
+    "latitude": 38.053303,
+    "longitude": -84.55255,
+    "facing_degrees": 107,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14113724102",
+    "latitude": 38.042748,
+    "longitude": -84.501521,
+    "facing_degrees": 199,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14113734101",
+    "latitude": 38.057798,
+    "longitude": -84.487043,
+    "facing_degrees": 128,
+    "kind": "flock"
+  },
+  {
+    "id": "OSM-14115367801",
+    "latitude": 38.018568,
+    "longitude": -84.546482,
+    "facing_degrees": 168,
+    "kind": "flock"
+  }
+]
