@@ -9,6 +9,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         app: resolve(__dirname, "app/index.html"),
+        appDirect: resolve(__dirname, "app.html"),
         dossier: resolve(__dirname, "dossier.html"),
         website: resolve(__dirname, "website/index.html"),
         websiteDossier: resolve(__dirname, "website/dossier.html"),
