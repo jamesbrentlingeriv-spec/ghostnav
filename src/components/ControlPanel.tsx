@@ -51,6 +51,8 @@ interface ControlPanelProps {
   onScanNearbyCameras?: () => void;
   isScanning?: boolean;
   onJumpToDemoArea?: () => void;
+  activeSectorName?: string | null;
+  onChangeSector?: () => void;
 }
 
 const KIND_CONFIG: { kind: CameraKind; label: string; color: string; desc: string }[] = [
@@ -83,6 +85,8 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
   onScanNearbyCameras,
   isScanning = false,
   onJumpToDemoArea,
+  activeSectorName,
+  onChangeSector,
 }) => {
   const [activeTab, setActiveTab] = useState<'routing' | 'cameras' | 'settings'>('routing');
 
@@ -282,11 +286,22 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
           <div>
             <h2 className="text-base font-extrabold text-white tracking-wide flex items-center gap-2">
               GhostNav
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">
-                LEXINGTON, KY
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 font-bold border border-cyan-500/30 truncate max-w-[140px]">
+                {activeSectorName || 'LEXINGTON, KY'}
               </span>
             </h2>
-            <p className="text-[11px] text-slate-400">Offline Camera-Aware GPS Navigation</p>
+            <div className="flex items-center gap-2">
+              <p className="text-[11px] text-slate-400">Camera-Aware GPS</p>
+              {onChangeSector && (
+                <button
+                  type="button"
+                  onClick={onChangeSector}
+                  className="text-[10px] font-mono text-cyan-400 hover:text-cyan-300 underline font-bold cursor-pointer"
+                >
+                  Change ZIP
+                </button>
+              )}
+            </div>
           </div>
         </div>
 

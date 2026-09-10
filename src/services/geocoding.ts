@@ -308,6 +308,88 @@ class GeocodingService {
     }
     return `${lat.toFixed(4)}, ${lon.toFixed(4)}`;
   }
+
+  /**
+   * Fast, reliable US ZIP code geocoding using Zippopotam with Nominatim fallback
+   */
+  public async lookupZipCode(zip: string): Promise<{
+    zip: string;
+    city: string;
+    state: string;
+    latitude: number;
+    longitude: number;
+    formatted: string;
+  } | null> {
+    const cleanZip = zip.trim().replace(/[^\d]/g, '').slice(0, 5);
+    if (cleanZip.length !== 5) return null;
+
+    // 1. Zippopotam.us (super fast, dedicated US zip database)
+    try {
+      const resp = await fetch(`https://api.zippopotam.us/us/${cleanZip}`);
+      if (resp.ok) {
+        const data = await resp.json();
+        const place = data.places?.[0];
+        if (place) {
+          const lat = parseFloat(place.latitude);
+          const lon = parseFloat(place.longitude);
+          const city = place['place name'] || '';
+          const state = place['state abbreviation'] || place['state'] || '';
+          return {
+            zip: cleanZip,
+            city,
+            state,
+            latitude: lat,
+            longitude: lon,
+            formatted: `${city}, ${state} ${cleanZip}`,
+          };
+        }
+      }
+    } catch (e) {
+      console.warn('Zippopotam zip lookup error:', e);
+    }
+
+    // 2. Nominatim fallback
+    try {
+      const resp = await fetch(
+        `https://nominatim.openstreetmap.org/search?postalcode=${cleanZip}&country=us&format=json&limit=1`,
+        { headers: { 'User-Agent': 'GhostNav-Tactical/1.0' } }
+      );
+      if (resp.ok) {
+        const data = await resp.json();
+        if (data && data[0]) {
+          const lat = parseFloat(data[0].lat);
+          const lon = parseFloat(data[0].lon);
+          const parts = (data[0].display_name || '').split(',');
+          const city = parts[1]?.trim() || 'Sector';
+          const state = parts[2]?.trim() || '';
+          return {
+            zip: cleanZip,
+            city,
+            state,
+            latitude: lat,
+            longitude: lon,
+            formatted: `${cleanZip} (${city})`,
+          };
+        }
+      }
+    } catch (e) {
+      console.warn('Nominatim zip lookup error:', e);
+    }
+
+    // 3. Fallback for default Lexington ZIP
+    if (cleanZip === '40509') {
+      return {
+        zip: '40509',
+        city: 'Lexington',
+        state: 'KY',
+        latitude: 38.0102,
+        longitude: -84.4274,
+        formatted: 'Lexington, KY 40509',
+      };
+    }
+
+    return null;
+  }
 }
 
 export const geocodingService = new GeocodingService();

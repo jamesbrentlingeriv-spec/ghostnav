@@ -38,6 +38,8 @@ interface NavigationHUDProps {
   onLocateMe?: () => void;
   onClearRoute?: () => void;
   onSelectDestination?: (dest: LatLng, name?: string) => void;
+  activeSectorName?: string | null;
+  onChangeSector?: () => void;
 }
 
 export const NavigationHUD: React.FC<NavigationHUDProps> = ({
@@ -53,6 +55,8 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
   onLocateMe,
   onClearRoute,
   onSelectDestination,
+  activeSectorName,
+  onChangeSector,
 }) => {
   const currentStep = activeRoute?.steps[0];
   const nextStep = activeRoute?.steps[1];
@@ -293,6 +297,20 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
 
           {/* Action Floating Controls (Right) */}
           <div className="pointer-events-auto flex items-center gap-1.5 sm:gap-2">
+            {onChangeSector && (
+              <button
+                onClick={onChangeSector}
+                className="p-3 rounded-2xl bg-slate-900/90 border border-cyan-500/60 hover:border-cyan-400 text-cyan-300 hover:text-white transition shadow-lg flex items-center gap-1.5 font-bold text-xs backdrop-blur-md cursor-pointer"
+                title="Change Sector or ZIP Code"
+              >
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span className="hidden lg:inline font-mono">
+                  {activeSectorName || 'SECTOR'}
+                </span>
+                <span className="lg:hidden font-mono">ZIP</span>
+              </button>
+            )}
+
             {onLocateMe && (
               <button
                 onClick={onLocateMe}

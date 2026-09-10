@@ -13,6 +13,7 @@ interface MapComponentProps {
   alternativeRoute?: RouteResult | null;
   onMapClick?: (coords: LatLng) => void;
   followUser: boolean;
+  flyToCoords?: LatLng | null;
 }
 
 const KIND_COLORS: Record<CameraKind, string> = {
@@ -59,6 +60,7 @@ export const MapComponent: React.FC<MapComponentProps> = ({
   alternativeRoute,
   onMapClick,
   followUser,
+  flyToCoords,
 }) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
@@ -128,8 +130,14 @@ export const MapComponent: React.FC<MapComponentProps> = ({
 
     const userLatLng = L.latLng(gpsState.latitude, gpsState.longitude);
 
-    // Automatically center and zoom to user's real location on first GPS acquisition
-    if (!hasInitiallyCenteredRef.current) {
+    // Fly to new sector coordinates when user enters a ZIP or clicks current location
+    if (flyToCoords) {
+      map.flyTo([flyToCoords.latitude, flyToCoords.longitude], 14, {
+        duration: 1.2,
+      });
+      hasInitiallyCenteredRef.current = true;
+    } else if (!hasInitiallyCenteredRef.current) {
+      // Automatically center and zoom to user's real location on first GPS acquisition
       map.setView(userLatLng, 16, { animate: true });
       hasInitiallyCenteredRef.current = true;
     }

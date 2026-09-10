@@ -81,7 +81,7 @@ class CameraDatabase {
   public async fetchNearbyOverpassCameras(
     lat: number,
     lon: number,
-    radiusKm: number = 8
+    radiusKm: number = 15
   ): Promise<Camera[]> {
     const degOffset = radiusKm / 111;
     const minLat = (lat - degOffset).toFixed(4);
@@ -110,8 +110,11 @@ class CameraDatabase {
       try {
         const resp = await fetch(server, {
           method: 'POST',
-          body: query,
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `data=${encodeURIComponent(query)}`,
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'User-Agent': 'GhostNav-Tactical-App/1.0',
+          },
         });
 
         if (!resp.ok) continue;

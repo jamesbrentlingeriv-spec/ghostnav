@@ -11,6 +11,7 @@ import { MapComponent } from './components/MapComponent';
 import { NavigationHUD } from './components/NavigationHUD';
 import { ControlPanel } from './components/ControlPanel';
 import { CameraDetailsModal } from './components/CameraDetailsModal';
+import { InitialLocationModal } from './components/InitialLocationModal';
 
 export const App: React.FC = () => {
   // GPS State
@@ -40,6 +41,29 @@ export const App: React.FC = () => {
   const [destination, setDestination] = useState<LatLng | null>(null);
   const [standardRoute, setStandardRoute] = useState<RouteResult | null>(null);
   const [avoidanceRoute, setAvoidanceRoute] = useState<RouteResult | null>(null);
+
+  // Active Sector (ZIP or Current Location)
+  const [activeSector, setActiveSector] = useState<{
+    zip?: string;
+    name: string;
+    coords: LatLng;
+  } | null>(() => {
+    const saved = localStorage.getItem('ghostnav_active_sector');
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch (e) {}
+    }
+    return null;
+  });
+
+  // Modal is opened at the beginning if no sector is selected yet (or when user clicks Change)
+  const [showLocationModal, setShowLocationModal] = useState<boolean>(() => {
+    return !localStorage.getItem('ghostnav_active_sector');
+  });
+  const [isSectorLoading, setIsSectorLoading] = useState<boolean>(false);
+  const [sectorStatusMsg, setSectorStatusMsg] = useState<string | null>(null);
+  const [flyToCoords, setFlyToCoords] = useState<LatLng | null>(null);
 
   // Start Live GPS on Mount & Auto-fetch nearby cameras
   useEffect(() => {
@@ -266,6 +290,102 @@ export const App: React.FC = () => {
     }
   };
 
+  const handleSelectZip = async (zipData: {
+    zip: string;
+    city: string;
+    state: string;
+    latitude: number;
+    longitude: number;
+    formatted: string;
+  }) => {
+    setIsSectorLoading(true);
+    setSectorStatusMsg(`Locating sector for ZIP ${zipData.zip}...`);
+    try {
+      const coords: LatLng = {
+        latitude: zipData.latitude,
+        longitude: zipData.longitude,
+      };
+
+      const newGps: GPSState = {
+        latitude: coords.latitude,
+        longitude: coords.longitude,
+        heading: 0,
+        speed: 0,
+        accuracy: 10,
+        timestamp: Date.now(),
+      };
+      setGpsState(newGps);
+      setFlyToCoords(coords);
+      setFollowUser(true);
+
+      setSectorStatusMsg(`Scanning active surveillance cameras in ${zipData.formatted}...`);
+      const newCams = await cameraDb.fetchNearbyOverpassCameras(coords.latitude, coords.longitude, 15);
+      setCamerasVersion((v) => v + 1);
+
+      const sectorInfo = {
+        zip: zipData.zip,
+        name: zipData.formatted,
+        coords,
+      };
+      setActiveSector(sectorInfo);
+      localStorage.setItem('ghostnav_active_sector', JSON.stringify(sectorInfo));
+
+      setSectorStatusMsg(
+        `Grid initialized! ${newCams.length > 0 ? `${newCams.length} live cameras detected.` : 'Cameras loaded for sector.'}`
+      );
+      setTimeout(() => {
+        setShowLocationModal(false);
+        setIsSectorLoading(false);
+        setSectorStatusMsg(null);
+      }, 700);
+    } catch (err) {
+      console.error('ZIP selection error:', err);
+      setIsSectorLoading(false);
+      setSectorStatusMsg('Failed to initialize sector. Please try again.');
+    }
+  };
+
+  const handleSelectCurrentLocation = async () => {
+    setIsSectorLoading(true);
+    setSectorStatusMsg('Acquiring high-precision device GPS...');
+    try {
+      const realState = await gpsService.requestRealDevicePosition();
+      const lat = realState ? realState.latitude : 38.0406;
+      const lon = realState ? realState.longitude : -84.5037;
+      const coords: LatLng = { latitude: lat, longitude: lon };
+
+      if (realState) {
+        setGpsState(realState);
+      }
+      setFlyToCoords(coords);
+      setFollowUser(true);
+
+      setSectorStatusMsg('Scanning local surveillance grid around your coordinates...');
+      const newCams = await cameraDb.fetchNearbyOverpassCameras(lat, lon, 15);
+      setCamerasVersion((v) => v + 1);
+
+      const sectorInfo = {
+        name: 'Current Location',
+        coords,
+      };
+      setActiveSector(sectorInfo);
+      localStorage.setItem('ghostnav_active_sector', JSON.stringify(sectorInfo));
+
+      setSectorStatusMsg(
+        `Grid active! ${newCams.length > 0 ? `${newCams.length} live cameras detected.` : 'Cameras loaded.'}`
+      );
+      setTimeout(() => {
+        setShowLocationModal(false);
+        setIsSectorLoading(false);
+        setSectorStatusMsg(null);
+      }, 700);
+    } catch (err) {
+      console.error('GPS error:', err);
+      setIsSectorLoading(false);
+      setSectorStatusMsg('Could not acquire device GPS. Please enter a ZIP code.');
+    }
+  };
+
   const handleJumpToDemoArea = () => {
     const lexingtonCenter: GPSState = {
       latitude: 38.0450,
@@ -305,6 +425,8 @@ export const App: React.FC = () => {
         onScanNearbyCameras={handleScanNearbyCameras}
         isScanning={isScanning}
         onJumpToDemoArea={handleJumpToDemoArea}
+        activeSectorName={activeSector?.name}
+        onChangeSector={() => setShowLocationModal(true)}
       />
 
       {/* Main Map & Navigation Viewport */}
@@ -319,6 +441,7 @@ export const App: React.FC = () => {
           alternativeRoute={alternativeRoute}
           onMapClick={(coords) => handleSelectDestination(coords)}
           followUser={followUser}
+          flyToCoords={flyToCoords}
         />
 
         {/* Top Turn-by-Turn & Alert HUD */}
@@ -335,6 +458,8 @@ export const App: React.FC = () => {
           onLocateMe={handleLocateMe}
           onClearRoute={handleClearRoute}
           onSelectDestination={handleSelectDestination}
+          activeSectorName={activeSector?.name}
+          onChangeSector={() => setShowLocationModal(true)}
         />
 
         {/* Camera Inspector Modal */}
@@ -342,6 +467,17 @@ export const App: React.FC = () => {
           camera={selectedCamera}
           gpsState={gpsState}
           onClose={() => setSelectedCamera(null)}
+        />
+
+        {/* Initial Location / ZIP Code Setup Modal */}
+        <InitialLocationModal
+          isOpen={showLocationModal}
+          onSelectZip={handleSelectZip}
+          onSelectCurrentLocation={handleSelectCurrentLocation}
+          onClose={activeSector ? () => setShowLocationModal(false) : undefined}
+          isLoading={isSectorLoading}
+          statusMessage={sectorStatusMsg}
+          currentSectorName={activeSector?.name}
         />
       </main>
     </div>
