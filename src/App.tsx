@@ -13,6 +13,22 @@ import { ControlPanel } from './components/ControlPanel';
 import { CameraDetailsModal } from './components/CameraDetailsModal';
 import { InitialLocationModal } from './components/InitialLocationModal';
 
+const safeGetStorage = (key: string): string | null => {
+  try {
+    return typeof window !== 'undefined' && window.localStorage ? localStorage.getItem(key) : null;
+  } catch (e) {
+    return null;
+  }
+};
+
+const safeSetStorage = (key: string, value: string): void => {
+  try {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.setItem(key, value);
+    }
+  } catch (e) {}
+};
+
 export const App: React.FC = () => {
   // GPS State
   const [gpsState, setGpsState] = useState<GPSState | null>(null);
@@ -48,7 +64,7 @@ export const App: React.FC = () => {
     name: string;
     coords: LatLng;
   } | null>(() => {
-    const saved = localStorage.getItem('ghostnav_active_sector');
+    const saved = safeGetStorage('ghostnav_active_sector');
     if (saved) {
       try {
         return JSON.parse(saved);
@@ -59,7 +75,7 @@ export const App: React.FC = () => {
 
   // Modal is opened at the beginning if no sector is selected yet (or when user clicks Change)
   const [showLocationModal, setShowLocationModal] = useState<boolean>(() => {
-    return !localStorage.getItem('ghostnav_active_sector');
+    return !safeGetStorage('ghostnav_active_sector');
   });
   const [isSectorLoading, setIsSectorLoading] = useState<boolean>(false);
   const [sectorStatusMsg, setSectorStatusMsg] = useState<string | null>(null);
@@ -328,7 +344,7 @@ export const App: React.FC = () => {
         coords,
       };
       setActiveSector(sectorInfo);
-      localStorage.setItem('ghostnav_active_sector', JSON.stringify(sectorInfo));
+      safeSetStorage('ghostnav_active_sector', JSON.stringify(sectorInfo));
 
       setSectorStatusMsg(
         `Grid initialized! ${newCams.length > 0 ? `${newCams.length} live cameras detected.` : 'Cameras loaded for sector.'}`
@@ -369,7 +385,7 @@ export const App: React.FC = () => {
         coords,
       };
       setActiveSector(sectorInfo);
-      localStorage.setItem('ghostnav_active_sector', JSON.stringify(sectorInfo));
+      safeSetStorage('ghostnav_active_sector', JSON.stringify(sectorInfo));
 
       setSectorStatusMsg(
         `Grid active! ${newCams.length > 0 ? `${newCams.length} live cameras detected.` : 'Cameras loaded.'}`

@@ -16,6 +16,10 @@
 <!-- Tailwind CSS CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
+    if (window.Capacitor && window.Capacitor.isNativePlatform()) {
+      window.location.replace('app.html');
+    }
+
     tailwind.config = {
       darkMode: 'class',
       theme: {
